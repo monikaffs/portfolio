@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-serif), ui-serif, Georgia, serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, monospace;
+
+  /* Theme tokens mapped to custom CSS variables */
+  --color-bg: var(--background);
+  --color-card: var(--card);
+  --color-sage: var(--sage);
+  --color-blue: var(--blue);
+  --color-charcoal: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border-color);
+}
+
+@layer base {
+  :root {
+    /* 
+      --- PALETTE SELECTIONS ---
+      
+      Option A: Warm Sage (Default)
+      --background: #F8F5F0; --foreground: #1F2937; --card: #FFFFFF; --border-color: #E5E0D8; --sage: #7F8F73; --blue: #6B7A99; --muted: #6B7280;
+      
+      Option B: Midnight Cyber (Active Option)
+      --background: #F0F4F8; --foreground: #0F172A; --card: #FFFFFF; --border-color: #E2E8F0; --sage: #0891B2; --blue: #4F46E5; --muted: #64748B;
+
+      Option C: Emerald Gold
+      --background: #F0FDF4; --foreground: #064E3B; --card: #FFFFFF; --border-color: #D1FAE5; --sage: #10B981; --blue: #F59E0B; --muted: #047857;
+
+      Option D: Sand & Terracotta
+      --background: #FCF8F2; --foreground: #292524; --card: #FFFFFF; --border-color: #EAE3D5; --sage: #C2410C; --blue: #E11D48; --muted: #78716C;
+    */
+
+    /* Active: Option B (Midnight Cyber - Light Mode Fallback) */
+    --background: #F0F4F8;
+    --foreground: #0F172A;
+    --card: #FFFFFF;
+    --border-color: #E2E8F0;
+    --sage: #0891B2;
+    --blue: #4F46E5;
+    --muted: #64748B;
+  }
+
+  .dark {
+    /* 
+      Option A: Warm Sage
+      --background: #12100E; --foreground: #F8F5F0; --card: #1c1a17; --border-color: #2d2a26; --sage: #7F8F73; --blue: #6B7A99; --muted: #9ca3af;
+      
+      Option B: Midnight Cyber (Active Option)
+      --background: #0B0F19; --foreground: #F3F4F6; --card: #161B2B; --border-color: #1F293D; --sage: #06B6D4; --blue: #6366F1; --muted: #9CA3AF;
+
+      Option C: Emerald Gold
+      --background: #0A1410; --foreground: #ECFDF5; --card: #12241D; --border-color: #1A3B2F; --sage: #10B981; --blue: #F59E0B; --muted: #6EE7B7;
+
+      Option D: Sand & Terracotta
+      --background: #1C1917; --foreground: #F5F5F4; --card: #292524; --border-color: #44403C; --sage: #C2410C; --blue: #E11D48; --muted: #A8A29E;
+    */
+
+    /* Active: Option B (Midnight Cyber - Dark Mode) */
+    --background: #0B0F19;
+    --foreground: #F3F4F6;
+    --card: #161B2B;
+    --border-color: #1F293D;
+    --sage: #06B6D4;
+    --blue: #6366F1;
+    --muted: #9CA3AF;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    @apply transition-colors duration-300;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), var(--font-sans);
+  }
+
+  /* Ensure tap targets are at least 44px on mobile */
+  button, a {
+    min-height: 0; /* let layout drive height, but keep accessible */
+    touch-action: manipulation;
+  }
+}
+
+/* Scroll Progress Bar */
+#scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--sage), var(--blue));
+  z-index: 9999;
+  transform-origin: left;
+  border-radius: 0 2px 2px 0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sage);
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.dark .glass {
+  background: rgba(22, 27, 43, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--sage) 0%, var(--blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding-bottom: 0.15em; /* Prevent descender clipping (g, y, p) with background-clip: text */
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Typewriter cursor blink */
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Pulse glow */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(127, 143, 115, 0.4); }
+  50% { box-shadow: 0 0 0 8px rgba(127, 143, 115, 0); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
