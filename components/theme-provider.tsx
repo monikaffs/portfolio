@@ -28,14 +28,12 @@ export function ThemeProvider({
   const [theme, setTheme] = useState<Theme>(defaultTheme);
 
   useEffect(() => {
-    const root = window.document.documentElement;
-    
-    // Check local storage or system preference on mount
+    // Only restore manually saved preference — don't auto-detect system dark mode
     const storedTheme = localStorage.getItem("theme") as Theme | null;
-    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-    
-    const initialTheme = storedTheme || systemTheme;
-    setTheme(initialTheme);
+    if (storedTheme) {
+      setTheme(storedTheme);
+    }
+    // else stays as defaultTheme ("light")
   }, []);
 
   useEffect(() => {
