@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import { SectionHeader } from "@/components/ui/section-header";
 
-const CATEGORIES = ["All", "AI", "Web Development", "Java", "Python"];
+const CATEGORIES = ["All", "AI", "Web Development", "Java", "Python", "Research Paper"];
 
 const PROJECTS = [
   {
