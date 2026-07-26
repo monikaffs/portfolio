@@ -71,44 +71,44 @@ function FeaturedCard({ item, index }: { item: (typeof FEATURED)[0]; index: numb
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.12 }}
-      className="group relative bg-card rounded-2xl border border-border overflow-hidden hover:border-sage hover:shadow-xl hover:shadow-sage/10 transition-all duration-300 hover:-translate-y-1"
+      className="group relative bg-card rounded-xl border border-border overflow-hidden hover:border-sage hover:shadow-lg hover:shadow-sage/10 transition-all duration-300 hover:-translate-y-1"
     >
-      {/* Gradient top or Image */}
-      <div className={`${item.image ? "" : "h-28"} w-full bg-gradient-to-br ${item.gradient} flex items-center justify-center relative overflow-hidden`}>
+      {/* Image / gradient area — fixed height */}
+      <div className={`w-full h-40 bg-gradient-to-br ${item.gradient} flex items-center justify-center relative overflow-hidden`}>
         {item.image ? (
-          <img src={item.image} alt={item.title} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+          <img src={item.image} alt={item.title} className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
         ) : (
-          <span className="text-5xl group-hover:scale-110 transition-transform duration-500">{item.emoji}</span>
+          <span className="text-4xl group-hover:scale-110 transition-transform duration-500">{item.emoji}</span>
         )}
-        <div className={`absolute inset-0 bg-gradient-to-t from-card to-transparent ${item.image ? "opacity-10" : "opacity-50"}`} />
+        <div className={`absolute inset-0 bg-gradient-to-t from-card to-transparent ${item.image ? "opacity-20" : "opacity-50"}`} />
         <span
-          className="absolute top-3 right-3 text-[8px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-md text-white shadow-sm"
+          className="absolute top-2 right-2 text-[8px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-md text-white shadow-sm"
           style={{ backgroundColor: item.accentColor }}
         >
           {item.type}
         </span>
       </div>
 
-      <div className="p-5">
-        <h3 className={`font-heading font-bold text-charcoal mb-1 ${item.title === "Intern of the Month" ? "text-xl" : "text-sm"}`}>
+      <div className="p-4">
+        <h3 className="font-heading font-bold text-charcoal text-sm mb-0.5 leading-snug">
           {item.title}
         </h3>
         {(item as any).subtitle && (
           <p className="text-xs font-semibold text-charcoal/90 mb-1">{(item as any).subtitle}</p>
         )}
-        <p className="text-[11px] text-muted mb-3">
+        <p className="text-[10px] text-muted mb-2">
           {item.org} · {item.date}
         </p>
-        <p className="text-[12px] text-charcoal/80 leading-relaxed">
+        <p className="text-[11px] text-charcoal/80 leading-relaxed line-clamp-2">
           {item.desc}
         </p>
         {!(item as any).hideAction && (
           item.link ? (
-            <a href={item.link} target="_blank" rel="noopener noreferrer" className="mt-4 flex items-center gap-1 text-[11px] font-bold uppercase tracking-wide hover:gap-2 transition-all w-fit cursor-pointer" style={{ color: item.accentColor }}>
+            <a href={item.link} target="_blank" rel="noopener noreferrer" className="mt-3 flex items-center gap-1 text-[10px] font-bold uppercase tracking-wide hover:gap-2 transition-all w-fit cursor-pointer" style={{ color: item.accentColor }}>
               {item.actionText || "View Credential"} <ExternalLink className="w-3 h-3" />
             </a>
           ) : (
-            <button className="mt-4 flex items-center gap-1 text-[11px] font-bold uppercase tracking-wide hover:gap-2 transition-all cursor-pointer" style={{ color: item.accentColor }}>
+            <button className="mt-3 flex items-center gap-1 text-[10px] font-bold uppercase tracking-wide hover:gap-2 transition-all cursor-pointer" style={{ color: item.accentColor }}>
               {item.actionText || "View Credential"} <ExternalLink className="w-3 h-3" />
             </button>
           )
@@ -128,41 +128,40 @@ function CertCard({ cert, index, onImageClick }: { cert: (typeof ALL_CERTIFICATE
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.9 }}
         transition={{ duration: 0.25, delay: index * 0.04 }}
-        className="group bg-card rounded-xl border border-border overflow-hidden hover:border-sage hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 cursor-pointer"
+        className="group bg-card rounded-lg border border-border overflow-hidden hover:border-sage hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 cursor-pointer"
         onClick={() => onImageClick?.((cert as any).image)}
       >
-        {/* Certificate image preview (aspect-ratio preserved) */}
-        <div className="relative overflow-hidden bg-white/50 dark:bg-black/10 aspect-[1.414] w-full flex items-center justify-center">
+        {/* Certificate image — fixed height */}
+        <div className="relative overflow-hidden bg-white/50 dark:bg-black/10 h-32 w-full flex items-center justify-center">
           <img
             src={(cert as any).image}
             alt={cert.title}
             className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
           />
-          {/* Hover zoom overlay */}
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-            <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-lg">
-              <ZoomIn className="w-4 h-4 text-charcoal" />
+            <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 backdrop-blur-sm rounded-full p-1.5 shadow-lg">
+              <ZoomIn className="w-3.5 h-3.5 text-charcoal" />
             </div>
           </div>
         </div>
         {/* Text info */}
-        <div className="p-3 flex items-start gap-2">
-          <div className="w-7 h-7 rounded-lg bg-sage/10 flex items-center justify-center text-sm flex-shrink-0">
+        <div className="p-2.5 flex items-start gap-2">
+          <div className="w-6 h-6 rounded-md bg-sage/10 flex items-center justify-center text-xs flex-shrink-0">
             {cert.emoji}
           </div>
           <div className="flex-1 min-w-0">
-            <h4 className="font-semibold text-charcoal text-xs leading-snug truncate">{cert.title}</h4>
-            <p className="text-[10px] text-muted mt-0.5 truncate">{cert.org}</p>
-            <div className="flex items-center gap-2 mt-1.5 flex-wrap">
-              <span className="text-[10px] font-mono text-sage">{cert.date}</span>
+            <h4 className="font-semibold text-charcoal text-[11px] leading-snug truncate">{cert.title}</h4>
+            <p className="text-[9px] text-muted mt-0.5 truncate">{cert.org}</p>
+            <div className="flex items-center gap-1.5 mt-1 flex-wrap">
+              <span className="text-[9px] font-mono text-sage">{cert.date}</span>
               {(cert as any).rating && (
-                <span className="text-[9px] font-bold px-1.5 py-0.5 bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 rounded-md">
-                  ★ {(cert as any).rating} Rating
+                <span className="text-[8px] font-bold px-1 py-0.5 bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 rounded">
+                  ★ {(cert as any).rating}
                 </span>
               )}
               {(cert as any).score && (
-                <span className="text-[9px] font-bold px-1.5 py-0.5 bg-blue/10 text-blue dark:text-blue-400 rounded-md">
-                  {(cert as any).score} Score
+                <span className="text-[8px] font-bold px-1 py-0.5 bg-blue/10 text-blue dark:text-blue-400 rounded">
+                  {(cert as any).score}
                 </span>
               )}
             </div>
@@ -178,19 +177,19 @@ function CertCard({ cert, index, onImageClick }: { cert: (typeof ALL_CERTIFICATE
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.9 }}
       transition={{ duration: 0.25, delay: index * 0.04 }}
-      className="group bg-card rounded-xl border border-border p-4 hover:border-sage hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex items-start gap-3"
+      className="group bg-card rounded-lg border border-border p-3 hover:border-sage hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex items-start gap-2.5"
     >
-      <div className="w-9 h-9 rounded-xl bg-sage/10 flex items-center justify-center text-lg flex-shrink-0">
+      <div className="w-8 h-8 rounded-lg bg-sage/10 flex items-center justify-center text-base flex-shrink-0">
         {cert.emoji}
       </div>
       <div className="flex-1 min-w-0">
-        <h4 className="font-semibold text-charcoal text-xs leading-snug truncate">
+        <h4 className="font-semibold text-charcoal text-[11px] leading-snug truncate">
           {cert.title}
         </h4>
-        <p className="text-[10px] text-muted mt-0.5 truncate">
+        <p className="text-[9px] text-muted mt-0.5 truncate">
           {cert.org}
         </p>
-        <p className="text-[10px] font-mono text-sage mt-0.5">{cert.date}</p>
+        <p className="text-[9px] font-mono text-sage mt-0.5">{cert.date}</p>
       </div>
     </motion.div>
   );
@@ -246,7 +245,7 @@ export function Achievements() {
           <h3 className="text-xs font-bold uppercase tracking-widest text-muted mb-6">
             🌟 Featured
           </h3>
-          <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-4 sm:gap-5">
+          <div className="grid sm:grid-cols-2 gap-3">
             {FEATURED.map((item, i) => (
               <FeaturedCard key={item.title} item={item} index={i} />
             ))}
@@ -259,7 +258,7 @@ export function Achievements() {
             🏅 Certificate Gallery
           </h3>
 
-          <motion.div layout className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+          <motion.div layout className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2.5">
             <AnimatePresence mode="popLayout">
               {visibleCerts.map((cert, i) => (
                 <CertCard key={cert.title} cert={cert} index={i} onImageClick={(src) => setLightboxImg(src)} />
