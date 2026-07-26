@@ -28,7 +28,7 @@ import { SectionHeader } from "@/components/ui/section-header";
 /* ── data ─────────────────────────────────────────────────── */
 
 const STATS = [
-  { label: "Projects Built", value: "8+", icon: Code2 },
+  { label: "Projects Built", value: "13+", icon: Code2 },
   { label: "CGPA", value: "8.15", icon: GraduationCap },
   { label: "Internships", value: "2", icon: Briefcase },
   { label: "Technologies", value: "15+", icon: Cpu },
