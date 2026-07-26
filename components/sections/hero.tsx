@@ -6,8 +6,8 @@ import { ArrowRight, Download, Linkedin, Github, Mail } from "lucide-react";
 import { useTypewriter } from "@/hooks/use-typewriter";
 
 const STATS = [
-  { label: "Projects Completed", value: 8, suffix: "+" },
-  { label: "Certifications", value: 6, suffix: "" },
+  { label: "Projects Completed", value: 13, suffix: "+" },
+  { label: "Certifications", value: 7, suffix: "+" },
   { label: "Current CGPA", value: 8.15, suffix: "/10", isDecimal: true },
   { label: "Hackathon Winner", value: 1, suffix: "" },
   { label: "Internships", value: 2, suffix: "" },
