@@ -158,7 +158,9 @@ export function Hero() {
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1RzjI68uIvPYsoxAxQs1JCl6Y8hvPHBo8/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-card border-2 border-border text-charcoal rounded-xl font-semibold text-sm hover:border-sage hover:text-sage transition-all duration-300 shadow-md"
             >
               <Download className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />

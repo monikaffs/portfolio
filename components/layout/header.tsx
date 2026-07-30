@@ -101,7 +101,9 @@ export function Header() {
             );
           })}
           <a
-            href="/resume.pdf"
+            href="https://drive.google.com/file/d/1RzjI68uIvPYsoxAxQs1JCl6Y8hvPHBo8/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
             className="ml-3 px-4 py-2 text-xs font-bold uppercase tracking-wide bg-charcoal dark:bg-bg text-bg dark:text-charcoal rounded-lg hover:bg-sage dark:hover:bg-sage dark:hover:text-bg transition-colors"
           >
             Resume
@@ -139,7 +141,9 @@ export function Header() {
                 </button>
               ))}
               <a
-                href="/resume.pdf"
+                href="https://drive.google.com/file/d/1RzjI68uIvPYsoxAxQs1JCl6Y8hvPHBo8/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-2 px-4 py-3 text-sm font-bold text-center bg-charcoal dark:bg-bg text-bg dark:text-charcoal rounded-lg"
               >
                 Download Resume

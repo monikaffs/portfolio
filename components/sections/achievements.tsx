@@ -31,8 +31,8 @@ const FEATURED = [
     accentColor: "#dc2626",
     desc: "Developed the KrishiLens Smart Farming Assistant project for this hackathon, utilizing AI image analysis and weather forecasting.",
     actionText: "View Project",
-    link: "https://github.com/harshdeepsinghofficial/KrishiLens",
-  }
+    link: "https://github.com/monikaffs/KrishiLens",
+  },
 ];
 
 const ALL_CERTIFICATES = [
@@ -51,6 +51,13 @@ const ALL_CERTIFICATES = [
   { title: "Blockchain Developer Training", org: "Simplilearn SkillUp", date: "June 2024", emoji: "⛓️", image: "/simplilearn-blockchain-cert.png" },
   { title: "Python for Machine Learning", org: "Great Learning Academy", date: "June 2024", emoji: "🤖", image: "/great-learning-ml-cert.png", imagePosition: "object-center" },
   { title: "Web Development Virtual Internship", org: "CodSoft", date: "June 2024", emoji: "💻", image: "/codsoft-internship.png", imagePosition: "object-top" },
+  {
+    title: "Database Administrator Intern — Offer Letter",
+    org: "Jamna Travels (India)",
+    date: "April 2026",
+    emoji: "🗄️",
+    image: "/jamna-travels-offer.jpg",
+  },
 ];
 
 const LEARNING_BADGES = [
@@ -71,25 +78,24 @@ function FeaturedCard({ item, index }: { item: (typeof FEATURED)[0]; index: numb
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.12 }}
-      className="group relative bg-card rounded-xl border border-border overflow-hidden hover:border-sage hover:shadow-lg hover:shadow-sage/10 transition-all duration-300 hover:-translate-y-1"
+      className="group relative bg-card rounded-xl border border-border overflow-hidden hover:border-sage hover:shadow-lg hover:shadow-sage/10 transition-all duration-300 hover:-translate-y-1 flex flex-col"
     >
-      {/* Image / gradient area — fixed height */}
-      <div className={`w-full h-40 bg-gradient-to-br ${item.gradient} flex items-center justify-center relative overflow-hidden`}>
+      {/* Image area — gradient bg fills empty space around contained image */}
+      <div className={`w-full aspect-[1.414] bg-gradient-to-br ${item.gradient} flex items-center justify-center relative overflow-hidden flex-shrink-0`}>
         {item.image ? (
-          <img src={item.image} alt={item.title} className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+          <img
+            src={item.image}
+            alt={item.title}
+            className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+          />
         ) : (
           <span className="text-4xl group-hover:scale-110 transition-transform duration-500">{item.emoji}</span>
         )}
-        <div className={`absolute inset-0 bg-gradient-to-t from-card to-transparent ${item.image ? "opacity-20" : "opacity-50"}`} />
-        <span
-          className="absolute top-2 right-2 text-[8px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-md text-white shadow-sm"
-          style={{ backgroundColor: item.accentColor }}
-        >
-          {item.type}
-        </span>
+        {/* Subtle bottom fade to blend into card */}
+        <div className="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-card/60 to-transparent" />
       </div>
 
-      <div className="p-4">
+      <div className="p-4 flex flex-col flex-1">
         <h3 className="font-heading font-bold text-charcoal text-sm mb-0.5 leading-snug">
           {item.title}
         </h3>
@@ -99,7 +105,7 @@ function FeaturedCard({ item, index }: { item: (typeof FEATURED)[0]; index: numb
         <p className="text-[10px] text-muted mb-2">
           {item.org} · {item.date}
         </p>
-        <p className="text-[11px] text-charcoal/80 leading-relaxed line-clamp-2">
+        <p className="text-[11px] text-charcoal/80 leading-relaxed flex-1">
           {item.desc}
         </p>
         {!(item as any).hideAction && (
@@ -131,8 +137,8 @@ function CertCard({ cert, index, onImageClick }: { cert: (typeof ALL_CERTIFICATE
         className="group bg-card rounded-lg border border-border overflow-hidden hover:border-sage hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 cursor-pointer"
         onClick={() => onImageClick?.((cert as any).image)}
       >
-        {/* Certificate image — fixed height */}
-        <div className="relative overflow-hidden bg-white/50 dark:bg-black/10 h-32 w-full flex items-center justify-center">
+        {/* Certificate image preview (aspect-ratio preserved) */}
+        <div className="relative overflow-hidden bg-white/50 dark:bg-black/10 aspect-[1.414] w-full flex items-center justify-center">
           <img
             src={(cert as any).image}
             alt={cert.title}
@@ -245,7 +251,7 @@ export function Achievements() {
           <h3 className="text-xs font-bold uppercase tracking-widest text-muted mb-6">
             🌟 Featured
           </h3>
-          <div className="grid sm:grid-cols-2 gap-3">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
             {FEATURED.map((item, i) => (
               <FeaturedCard key={item.title} item={item} index={i} />
             ))}
@@ -258,7 +264,7 @@ export function Achievements() {
             🏅 Certificate Gallery
           </h3>
 
-          <motion.div layout className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2.5">
+          <motion.div layout className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
             <AnimatePresence mode="popLayout">
               {visibleCerts.map((cert, i) => (
                 <CertCard key={cert.title} cert={cert} index={i} onImageClick={(src) => setLightboxImg(src)} />

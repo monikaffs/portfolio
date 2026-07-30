@@ -28,8 +28,10 @@ export function ThemeProvider({
   const [theme, setTheme] = useState<Theme>(defaultTheme);
 
   useEffect(() => {
-    // Only restore manually saved preference — don't auto-detect system dark mode
-    const storedTheme = localStorage.getItem("theme") as Theme | null;
+    // Remove old key to prevent stale dark mode being loaded
+    localStorage.removeItem("theme");
+    // Only restore manually saved preference from new key
+    const storedTheme = localStorage.getItem("portfolio-theme") as Theme | null;
     if (storedTheme) {
       setTheme(storedTheme);
     }
@@ -40,7 +42,7 @@ export function ThemeProvider({
     const root = window.document.documentElement;
     root.classList.remove("light", "dark");
     root.classList.add(theme);
-    localStorage.setItem("theme", theme);
+    localStorage.setItem("portfolio-theme", theme);
   }, [theme]);
 
   const value = {

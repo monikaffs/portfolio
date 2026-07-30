@@ -22,11 +22,9 @@ export function Resume() {
             </p>
           </div>
           <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              alert("Resume download would trigger here.");
-            }}
+            href="https://drive.google.com/file/d/1RzjI68uIvPYsoxAxQs1JCl6Y8hvPHBo8/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-stone-800 dark:bg-stone-200 text-ivory dark:text-stone-900 border border-stone-800 dark:border-stone-200 uppercase tracking-wider text-[10px] font-bold rounded-sm hover:invert transition-colors"
           >
             <Download className="w-4 h-4" /> Download Resume

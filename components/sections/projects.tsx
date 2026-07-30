@@ -189,79 +189,6 @@ const PROJECTS = [
     featured: true,
   },
   {
-    id: 4,
-    title: "LabDox LMS — Career OS Platform",
-    description:
-      "A web-based learning management system designed to simulate a modern career-oriented platform, bridging the gap between learning and employability.",
-    longDescription:
-      "LabDox LMS (Career OS) is a web-based learning platform developed during my internship at LabDox, designed to simulate a modern career-oriented learning management system. The platform focuses on bridging the gap between learning and employability, offering a structured environment where users can explore content and register for opportunities.",
-    gradient: "from-[#4f46e5]/40 via-[#9333ea]/20 to-purple/10",
-    images: [
-      "/labdox-lms-1.png",
-      "/labdox-lms-2.png",
-      "/labdox-lms-3.png",
-      "/labdox-lms-4.png",
-      "/labdox-lms-5.png",
-      "/labdox-lms-6.png",
-      "/labdox-lms-7.png",
-    ],
-    captions: [
-      "Home — Career OS landing page",
-      "About the Learning Management System",
-      "Course Catalog — enroll, drop, or request courses",
-      "Profile Overview — courses, achievements, badges & skills analytics",
-      "Mentor Portal — upload and manage course content",
-      "Course Curriculum with AI chatbot assistance",
-      "Supabase backend — real-time PostgreSQL database",
-    ],
-    tags: ["HTML", "CSS", "JavaScript", "Supabase", "PostgreSQL"],
-    category: "AI",
-    features: [
-      "⚡ Built a complete LMS-style platform from scratch using core web technologies",
-      "🔗 Integrated Supabase backend for real-time data handling",
-      "🌐 Deployed across multiple platforms (GitHub Pages + Swipe Pages)",
-      "🧩 Designed with a Career OS concept (learning → leveling up → job readiness)",
-      "📦 Implemented user data capture via structured database",
-    ],
-    github: "https://github.com/monikaffs/labdox-lms",
-    live: "https://monikaffs.github.io/labdox-lms/",
-    featured: true,
-  },
-  {
-    id: 5,
-    title: "Salary Se Stability Tak",
-    description:
-      "A modern, highly engaging landing page built to calculate financial runway and stability for salaried professionals.",
-    longDescription:
-      "A modern, highly engaging landing page built to calculate financial runway and stability. Includes an interactive assessment tool for salaried professionals who want to understand their financial health and plan for long-term stability.",
-    gradient: "from-[#1e3a8a]/40 via-[#312e81]/30 to-blue/10",
-    images: [
-      "/stability-landing-page.png",
-      "/stability-landing-page-2.png",
-      "/stability-landing-page-3.png",
-      "/stability-landing-page-4.png",
-      "/stability-landing-page-5.png",
-    ],
-    captions: [
-      "Landing page — financial stability for salaried professionals",
-      "What financial stability really means",
-      "Your experience & career journey",
-      "Key learnings and financial insights",
-      "Registration — start your stability journey",
-    ],
-    tags: ["HTML", "CSS", "JavaScript", "Swipepages"],
-    category: "Web Development",
-    features: [
-      "🧮 90-second interactive stability test",
-      "📊 Salaried runway calculator",
-      "🌙 Sleek, responsive dark-theme design",
-      "⚡ Optimised for conversion and engagement",
-    ],
-    github: "https://github.com/monikaffs/-Salary-Se-Stability-Tak---Landing-Page",
-    live: "https://monikaffs.github.io/-Salary-Se-Stability-Tak---Landing-Page/",
-    featured: false,
-  },
-  {
     id: 6,
     title: "Research Paper: Cloud-Enabled LSTM Diabetes Risk Prediction",
     description:
@@ -279,7 +206,7 @@ const PROJECTS = [
       "Research Paper – Cloud-Enabled LSTM Diabetes Risk Prediction",
     ],
     tags: ["Python", "LSTM", "Deep Learning", "Cloud Computing", "MIMIC-III Dataset", "Healthcare Analytics"],
-    category: "AI",
+    category: "Research Paper",
     features: [
       "📊 Developed an LSTM-based deep learning framework for diabetes risk prediction",
       "☁️ Cloud-enabled architecture for scalable and efficient healthcare decision-making",
@@ -288,70 +215,6 @@ const PROJECTS = [
     ],
     github: "",
     live: "",
-    featured: false,
-  },
-  {
-    id: 7,
-    title: "BNI MCM Performance Tracker",
-    description:
-      "A web-based dashboard for BNI MCM to monitor member activities, contributions, and key performance metrics in real time.",
-    longDescription:
-      "A web-based performance tracking application developed for BNI MCM to monitor member activities, contributions, and key performance metrics in real time. The application provides an organised dashboard interface for tracking performance-related data efficiently — covering member management, real-time analytics, and a weekly leaderboard. Built with modern web technologies and deployed on Vercel and Cloudflare.",
-    gradient: "from-[#1a0000]/60 via-[#3b0a0a]/40 to-[#7f1d1d]/20",
-    images: [
-      "/bni-mcm-1.png",
-      "/bni-mcm-2.png",
-      "/bni-mcm-3.png",
-    ],
-    captions: [
-      "Dashboard interface of the BNI MCM Performance Tracker",
-      "Committee members management interface",
-      "Analytics and leaderboard dashboard",
-    ],
-    tags: ["HTML", "CSS", "JavaScript", "Firebase", "Vercel", "Cloudflare", "Backend APIs"],
-    category: "AI",
-    features: [
-      "📊 Real-time dashboard for tracking member performance & activities",
-      "👥 Committee members management — add, update, and monitor members",
-      "📈 Weekly trends analytics with referral and visitor charts",
-      "🏆 MCM leaderboard with live rankings and points",
-      "☁️ Deployed on Vercel with Cloudflare for performance & reliability",
-      "🔗 Firebase backend for real-time data management",
-    ],
-    github: "https://github.com/monikaffs/performance-tracker-bni-mcm",
-    live: "https://performance-tracker-bni-mcm.vercel.app/",
-    featured: false,
-  },
-  {
-    id: 8,
-    title: "Data Vault Pro",
-    description:
-      "Collect user inputs and store them securely in Supabase & Google Sheets simultaneously. No latency, no limits.",
-    longDescription:
-      "The ultra-fast way to collect user inputs and store them securely in Supabase & Google Sheets simultaneously. Getting your data pipeline running takes less than 2 minutes with a simple 3-step integration.",
-    gradient: "from-[#4f46e5]/40 via-[#6366f1]/20 to-blue/10",
-    images: [
-      "/datavault-pro-1.png",
-      "/datavault-pro-2.png",
-      "/datavault-pro-3.png",
-      "/datavault-pro-4.png",
-    ],
-    captions: [
-      "Home page — connect your data pipelines in minutes",
-      "Integration logic — how the dual-sync works",
-      "Configuration details — step-by-step setup",
-      "Data routing — submissions to PostgreSQL & Google Sheets",
-    ],
-    tags: ["HTML", "CSS", "JavaScript", "Google Sheets API", "Supabase"],
-    category: "Web Development",
-    features: [
-      "🔌 Connect Supabase & Google Sheet credentials in secure config",
-      "🛠️ Dynamic constructor to add unlimited custom input fields",
-      "📤 Route submissions to PostgreSQL & Spreadsheet storage",
-      "⚡ Sub-2-minute integration setup",
-    ],
-    github: "https://github.com/monikaffs/DataVault-Pro",
-    live: "https://monikaffs.github.io/DataVault-Pro/index.html",
     featured: false,
   },
   {
@@ -392,32 +255,6 @@ const PROJECTS = [
     ],
     github: "https://github.com/monikaffs/InsureEase",
     live: "",
-    featured: false,
-  },
-  {
-    id: 10,
-    title: "Codsoft — Creative Digital Agency Landing Page",
-    description:
-      "A modern, high-conversion landing page for a creative digital agency built as a task during the Codsoft Web Development Internship.",
-    longDescription:
-      "A responsive, visually engaging landing page developed for Codsoft during my Web Development internship. The page showcases a 'Creative Digital Agency' offering digital services like graphic design, video animation, content writing, branding, web development, SEO, and social media marketing. Built with clean, modern web standards to ensure optimal performance and responsive layouts across all device form factors.",
-    gradient: "from-[#4f46e5]/40 via-[#d946ef]/20 to-[#ec4899]/10",
-    images: [
-      "/codsoft-landing-1.png",
-    ],
-    captions: [
-      "We Are Creative! — Creative Digital Agency landing page",
-    ],
-    tags: ["HTML", "CSS", "JavaScript"],
-    category: "Web Development",
-    features: [
-      "⚡ Sleek, mobile-first responsive layout with clean custom styling",
-      "🎨 Engaging sections showcasing digital services (design, branding, web development, marketing)",
-      "✨ Interactive client navigation and micro-interactions built with vanilla JS",
-      "💼 Structured and developed as a task for the Codsoft Web Development Internship",
-    ],
-    github: "https://github.com/monikaffs/CODSOFT",
-    live: "https://monikaffs.github.io/CODSOFT/",
     featured: false,
   },
   {
@@ -498,6 +335,172 @@ const PROJECTS = [
     featured: false,
     aspectRatio: "aspect-[2548/1341]",
   },
+  {
+    id: 4,
+    title: "LabDox LMS — Career OS Platform",
+    description:
+      "A web-based learning management system designed to simulate a modern career-oriented platform, bridging the gap between learning and employability.",
+    longDescription:
+      "LabDox LMS (Career OS) is a web-based learning platform developed during my internship at LabDox, designed to simulate a modern career-oriented learning management system. The platform focuses on bridging the gap between learning and employability, offering a structured environment where users can explore content and register for opportunities.",
+    gradient: "from-[#4f46e5]/40 via-[#9333ea]/20 to-purple/10",
+    images: [
+      "/labdox-lms-1.png",
+      "/labdox-lms-2.png",
+      "/labdox-lms-3.png",
+      "/labdox-lms-4.png",
+      "/labdox-lms-5.png",
+      "/labdox-lms-6.png",
+      "/labdox-lms-7.png",
+    ],
+    captions: [
+      "Home — Career OS landing page",
+      "About the Learning Management System",
+      "Course Catalog — enroll, drop, or request courses",
+      "Profile Overview — courses, achievements, badges & skills analytics",
+      "Mentor Portal — upload and manage course content",
+      "Course Curriculum with AI chatbot assistance",
+      "Supabase backend — real-time PostgreSQL database",
+    ],
+    tags: ["HTML", "CSS", "JavaScript", "Supabase", "PostgreSQL"],
+    category: "AI",
+    features: [
+      "⚡ Built a complete LMS-style platform from scratch using core web technologies",
+      "🔗 Integrated Supabase backend for real-time data handling",
+      "🌐 Deployed across multiple platforms (GitHub Pages + Swipe Pages)",
+      "🧩 Designed with a Career OS concept (learning → leveling up → job readiness)",
+      "📦 Implemented user data capture via structured database",
+    ],
+    github: "https://github.com/monikaffs/labdox-lms",
+    live: "https://monikaffs.github.io/labdox-lms/",
+    featured: true,
+  },
+  {
+    id: 5,
+    title: "Salary Se Stability Tak",
+    description:
+      "A modern, highly engaging landing page built to calculate financial runway and stability for salaried professionals.",
+    longDescription:
+      "A modern, highly engaging landing page built to calculate financial runway and stability. Includes an interactive assessment tool for salaried professionals who want to understand their financial health and plan for long-term stability.",
+    gradient: "from-[#1e3a8a]/40 via-[#312e81]/30 to-blue/10",
+    images: [
+      "/stability-landing-page.png",
+      "/stability-landing-page-2.png",
+      "/stability-landing-page-3.png",
+      "/stability-landing-page-4.png",
+      "/stability-landing-page-5.png",
+    ],
+    captions: [
+      "Landing page — financial stability for salaried professionals",
+      "What financial stability really means",
+      "Your experience & career journey",
+      "Key learnings and financial insights",
+      "Registration — start your stability journey",
+    ],
+    tags: ["HTML", "CSS", "JavaScript", "Swipepages"],
+    category: "Web Development",
+    features: [
+      "🧮 90-second interactive stability test",
+      "📊 Salaried runway calculator",
+      "🌙 Sleek, responsive dark-theme design",
+      "⚡ Optimised for conversion and engagement",
+    ],
+    github: "https://github.com/monikaffs/-Salary-Se-Stability-Tak---Landing-Page",
+    live: "https://monikaffs.github.io/-Salary-Se-Stability-Tak---Landing-Page/",
+    featured: false,
+  },
+
+  {
+    id: 7,
+    title: "BNI MCM Performance Tracker",
+    description:
+      "A web-based dashboard for BNI MCM to monitor member activities, contributions, and key performance metrics in real time.",
+    longDescription:
+      "A web-based performance tracking application developed for BNI MCM to monitor member activities, contributions, and key performance metrics in real time. The application provides an organised dashboard interface for tracking performance-related data efficiently — covering member management, real-time analytics, and a weekly leaderboard. Built with modern web technologies and deployed on Vercel and Cloudflare.",
+    gradient: "from-[#1a0000]/60 via-[#3b0a0a]/40 to-[#7f1d1d]/20",
+    images: [
+      "/bni-mcm-1.png",
+      "/bni-mcm-2.png",
+      "/bni-mcm-3.png",
+    ],
+    captions: [
+      "Dashboard interface of the BNI MCM Performance Tracker",
+      "Committee members management interface",
+      "Analytics and leaderboard dashboard",
+    ],
+    tags: ["HTML", "CSS", "JavaScript", "Firebase", "Vercel", "Cloudflare", "Backend APIs"],
+    category: "AI",
+    features: [
+      "📊 Real-time dashboard for tracking member performance & activities",
+      "👥 Committee members management — add, update, and monitor members",
+      "📈 Weekly trends analytics with referral and visitor charts",
+      "🏆 MCM leaderboard with live rankings and points",
+      "☁️ Deployed on Vercel with Cloudflare for performance & reliability",
+      "🔗 Firebase backend for real-time data management",
+    ],
+    github: "https://github.com/monikaffs/performance-tracker-bni-mcm",
+    live: "https://performance-tracker-bni-mcm.vercel.app/",
+    featured: false,
+  },
+  {
+    id: 8,
+    title: "Data Vault Pro",
+    description:
+      "Collect user inputs and store them securely in Supabase & Google Sheets simultaneously. No latency, no limits.",
+    longDescription:
+      "The ultra-fast way to collect user inputs and store them securely in Supabase & Google Sheets simultaneously. Getting your data pipeline running takes less than 2 minutes with a simple 3-step integration.",
+    gradient: "from-[#4f46e5]/40 via-[#6366f1]/20 to-blue/10",
+    images: [
+      "/datavault-pro-1.png",
+      "/datavault-pro-2.png",
+      "/datavault-pro-3.png",
+      "/datavault-pro-4.png",
+    ],
+    captions: [
+      "Home page — connect your data pipelines in minutes",
+      "Integration logic — how the dual-sync works",
+      "Configuration details — step-by-step setup",
+      "Data routing — submissions to PostgreSQL & Google Sheets",
+    ],
+    tags: ["HTML", "CSS", "JavaScript", "Google Sheets API", "Supabase"],
+    category: "Web Development",
+    features: [
+      "🔌 Connect Supabase & Google Sheet credentials in secure config",
+      "🛠️ Dynamic constructor to add unlimited custom input fields",
+      "📤 Route submissions to PostgreSQL & Spreadsheet storage",
+      "⚡ Sub-2-minute integration setup",
+    ],
+    github: "https://github.com/monikaffs/DataVault-Pro",
+    live: "https://monikaffs.github.io/DataVault-Pro/index.html",
+    featured: false,
+  },
+
+  {
+    id: 10,
+    title: "Codsoft — Creative Digital Agency Landing Page",
+    description:
+      "A modern, high-conversion landing page for a creative digital agency built as a task during the Codsoft Web Development Internship.",
+    longDescription:
+      "A responsive, visually engaging landing page developed for Codsoft during my Web Development internship. The page showcases a 'Creative Digital Agency' offering digital services like graphic design, video animation, content writing, branding, web development, SEO, and social media marketing. Built with clean, modern web standards to ensure optimal performance and responsive layouts across all device form factors.",
+    gradient: "from-[#4f46e5]/40 via-[#d946ef]/20 to-[#ec4899]/10",
+    images: [
+      "/codsoft-landing-1.png",
+    ],
+    captions: [
+      "We Are Creative! — Creative Digital Agency landing page",
+    ],
+    tags: ["HTML", "CSS", "JavaScript"],
+    category: "Web Development",
+    features: [
+      "⚡ Sleek, mobile-first responsive layout with clean custom styling",
+      "🎨 Engaging sections showcasing digital services (design, branding, web development, marketing)",
+      "✨ Interactive client navigation and micro-interactions built with vanilla JS",
+      "💼 Structured and developed as a task for the Codsoft Web Development Internship",
+    ],
+    github: "https://github.com/monikaffs/CODSOFT",
+    live: "https://monikaffs.github.io/CODSOFT/",
+    featured: false,
+  },
+
 ];
 
 
@@ -801,7 +804,23 @@ function ProjectCard({
   index: number;
   onDetails: () => void;
 }) {
-  const coverImg = project.images?.[0] ?? project.image ?? null;
+  const images = project.images && project.images.length > 0
+    ? project.images
+    : project.image
+    ? [project.image]
+    : [];
+  const hasMultiple = images.length > 1;
+  const [currentImg, setCurrentImg] = useState(0);
+  const [hovered, setHovered] = useState(false);
+
+  const prev = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCurrentImg((i) => (i - 1 + images.length) % images.length);
+  };
+  const next = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCurrentImg((i) => (i + 1) % images.length);
+  };
 
   return (
     <motion.div
@@ -812,21 +831,57 @@ function ProjectCard({
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.3, delay: index * 0.07 }}
       className="group bg-card rounded-2xl border border-border overflow-hidden hover:border-sage/50 hover:shadow-2xl hover:shadow-sage/10 transition-all duration-300 hover:-translate-y-1.5 flex flex-col"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
-      {/* Image / Gradient header — taller */}
+      {/* Image / Gradient header */}
       <div
         className={`relative h-56 bg-gradient-to-br ${project.gradient} overflow-hidden flex items-center justify-center`}
       >
-        {coverImg ? (
+        {images.length > 0 ? (
           <img
-            src={coverImg}
+            src={images[currentImg]}
             alt={project.title}
-            className="absolute inset-0 w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+            className="absolute inset-0 w-full h-full object-contain transition-all duration-500 group-hover:scale-105"
           />
         ) : (
           <span className="text-6xl group-hover:scale-110 transition-transform duration-500">
             {project.emoji}
           </span>
+        )}
+
+        {/* Prev / Next arrows — show on hover when multiple images exist */}
+        {hasMultiple && hovered && (
+          <>
+            <button
+              onClick={prev}
+              className="absolute left-2 top-1/2 -translate-y-1/2 z-20 w-7 h-7 rounded-full bg-black/50 backdrop-blur-sm text-white flex items-center justify-center hover:bg-black/75 transition-colors shadow-md"
+              aria-label="Previous image"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <button
+              onClick={next}
+              className="absolute right-2 top-1/2 -translate-y-1/2 z-20 w-7 h-7 rounded-full bg-black/50 backdrop-blur-sm text-white flex items-center justify-center hover:bg-black/75 transition-colors shadow-md"
+              aria-label="Next image"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
+            {/* Dot indicators */}
+            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1">
+              {images.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={(e) => { e.stopPropagation(); setCurrentImg(i); }}
+                  className={`rounded-full transition-all duration-200 ${
+                    i === currentImg
+                      ? "w-4 h-1.5 bg-white"
+                      : "w-1.5 h-1.5 bg-white/50 hover:bg-white/80"
+                  }`}
+                />
+              ))}
+            </div>
+          </>
         )}
 
         {project.featured && (
@@ -848,7 +903,7 @@ function ProjectCard({
         <div className="absolute bottom-0 inset-x-0 h-10 bg-gradient-to-t from-card to-transparent" />
       </div>
 
-      {/* Card content — more padding + spacious */}
+      {/* Card content */}
       <div className="p-6 flex flex-col flex-1">
         <h3 className="font-heading font-bold text-charcoal dark:text-bg/90 text-lg mb-2 leading-snug">
           {project.title}
